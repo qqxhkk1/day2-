@@ -1,0 +1,10 @@
+import numpy as np
+np.random.seed(42)
+
+arr = np.random.randint(0, 10, size=(3, 4))
+reshaped_arr = arr.reshape(4, 3).T
+filtered_arr = arr[arr > 5]
+
+print("原数组:\n", arr)
+print("变形并转置:\n", reshaped_arr)
+print("大于 5 的元素:", filtered_arr)
