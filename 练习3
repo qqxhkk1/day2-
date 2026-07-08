@@ -1,0 +1,27 @@
+import numpy as np
+np.random.seed(42)
+
+A = np.random.randint(1, 10, size=(2, 3))
+B = np.random.randint(1, 10, size=(2, 3))
+
+multiply_elementwise = A * B
+matrix_product = A @ B.T
+
+small = np.array([[1, 2], [3, 4]])
+col_sum = np.sum(small, axis=0)
+row_sum = np.sum(small, axis=1)
+
+x = np.array([1.2, 3.5, 2.8])
+mean_x = np.mean(x)
+std_x = np.std(x)
+round_x = np.round(x)
+
+print("A:\n", A)
+print("B:\n", B)
+print("A * B:\n", multiply_elementwise)
+print("A @ B.T:\n", matrix_product)
+print("列求和 axis=0:", col_sum)
+print("行求和 axis=1:", row_sum)
+print("均值:", mean_x)
+print("标准差:", std_x)
+print("四舍五入:", round_x)
