@@ -1,0 +1,12 @@
+import numpy as np
+np.random.seed(42)
+arr = np.random.rand(10)
+
+normalized = (arr - arr.min()) / (arr.max() - arr.min()) * 100
+cum_sum = np.cumsum(normalized)
+cum_max = np.maximum.accumulate(normalized)
+
+print("原数组:", np.round(arr, 3))
+print("归一化:", np.round(normalized, 2))
+print("累计和:", np.round(cum_sum, 2))
+print("累计最大值:", np.round(cum_max, 2))
